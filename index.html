@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="km">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171717">
+  <title>DyFa MOVIE | រឿងថ្មីៗ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-icon">▶</span><span>KHMER <b>MOVIE</b><small>ភាពយន្ត និងរឿងភាគ</small></span></a>
+  <button class="menu-btn" id="menuBtn" aria-label="បើកម៉ឺនុយ">☰</button>
+  <nav id="nav">
+    <a href="#home">ទំព័រដើម</a><a href="#short">រឿងខ្លី</a><a href="#series">រឿងភាគ</a><a href="#movie">ភាពយន្ត</a>
+    <button class="admin-link" id="openAdmin">ចូល Admin</button>
+  </nav>
+</header>
+<main id="home">
+  <section class="hero">
+    <div><p class="eyebrow">សូមស្វាគមន៍មកកាន់</p><h1>DyFa MOVIE</h1>
+      <p>ស្វែងរក និងទស្សនារឿងដែលអ្នកចូលចិត្ត នៅកន្លែងតែមួយ។</p>
+      <a class="primary-btn" href="#latest">មើលរឿងថ្មីៗ</a></div>
+  </section>
+  <section class="search-row"><input id="searchInput" type="search" placeholder="ស្វែងរកឈ្មោះរឿង..." aria-label="ស្វែងរករឿង"></section>
+  <section class="section" id="latest">
+    <div class="section-heading"><h2>រឿងថ្មីៗ</h2><span>NEW RELEASES</span></div>
+    <div id="movieGrid" class="movie-grid"><p class="muted">កំពុងទាញយកទិន្នន័យ...</p></div>
+  </section>
+</main>
+<footer><b>DyFa MOVIE</b><p>គេហទំព័រចែករំលែកព័ត៌មាន និងតំណភ្ជាប់ភាពយន្ត។ សូមបង្ហោះតែវីដេអូដែលអ្នកមានសិទ្ធិប្រើប្រាស់។</p></footer>
+
+<div class="modal hidden" id="watchModal">
+  <div class="modal-card watch-card"><button class="close" data-close="watchModal">✕</button><div id="watchContent"></div></div>
+</div>
+<div class="modal hidden" id="adminModal">
+  <div class="modal-card admin-card"><button class="close" data-close="adminModal">✕</button>
+    <div id="adminContent">
+      <h2>គ្រប់គ្រង Website</h2><p class="muted">សូម Login ដើម្បីបន្ថែម ឬកែប្រែរឿង។</p>
+      <form id="loginForm" class="form">
+        <label>អ៊ីមែល Admin<input type="email" id="adminEmail" required placeholder="you@example.com"></label>
+        <label>ពាក្យសម្ងាត់<input type="password" id="adminPassword" required placeholder="ពាក្យសម្ងាត់"></label>
+        <button class="primary-btn" type="submit">ចូលប្រព័ន្ធ</button>
+      </form>
+      <p id="adminMessage" class="message"></p>
+    </div>
+  </div>
+</div>
+<script type="module" src="app.js"></script>
+</body></html>
